@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <title>Figuras geométricas | Curso básico</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            text-align: center;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+        section {
+            background-color: #ffebee;
+            width: 30%;
+            justify-content: center;
+            margin: 10px;
+            border: 1px solid black;
+            border-radius: 10px;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+        .labelTriangulo{
+            width: 100%;
+            padding: 0 20px 0 20px;
+            margin: 3px 0 3px 0;
+        }
+        button {
+            width: 90%;
+            margin: 3px;
+            border-radius: 5px;
+            border-color: black;
+        }
+        input {
+            width: 55%;
+            border-radius: 3px;
+            border-color: black;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 640px ) {
+            .container{
+                display: block;
+            }
+            section {
+                width: 90%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+
+        <h1>
+            Figuras geométricas
+        </h1>
+
+        <p>Perimetro y Area de Figuras con JS</p>
+    </header>
+    <div class="container">
+
+
+
+        <section>
+            <h2>Calcula el área y perímetro de un cuadrado
+    
+            </h2>
+            <form action="">
+                <label for="InputCuadrado">
+                    Lado del cuadrado
+                </label>
+    
+                <input type="number" name="" id="InputCuadrado">
+                <button type="button" onclick="calcularPerimetroCuadrado()">    
+                    Calcular perímetro
+                </button>
+                <button type="button" onclick="calcularAreaCuadrado()">
+                    Calcular el área
+    
+                </button>
+    
+            </form>
+    
+        </section>
+        <section>
+            <h2>Calcula el área y perímetro de un triangulo
+    
+            </h2>
+            <p>Si es isosceles, la altura se calculará automaticamente</p>
+            <form action="">
+                <div class="labelTriangulo">
+
+                    <label for="InputTriangulo">
+                        Lado 1
+                    </label>
+                    <input type="number" name="" id="InputTriangulo1">
+                </div>
+                <div class="labelTriangulo">
+
+                    <label for="InputTriangulo">
+                        Lado 2
+                    </label>
+                    
+                    <input type="number" name="" id="InputTriangulo2">
+                </div>
+                <div class="labelTriangulo">
+                    <label for="InputTriangulo">
+                        Base 
+                    </label>
+                    
+                    <input type="number" name="" id="InputTrianguloBase">
+                    
+                </div>
+                <div class="labelTriangulo">
+
+                    <label for="InputTriangulo">
+                        Altura 
+                    </label>
+                    
+                    <input type="number" name="" id="InputTrianguloAltura" onfocus="calcularIsIsosceles()">
+                </div>
+                <button type="button" onclick="calcularPerimetroTriangulo()">    
+                    Calcular perimetro
+                </button>
+                <button type="button" onclick="calcularAreaTriangulo()">
+                    Calcular el área
+    
+                </button>
+    
+            </form>
+    
+        </section>
+    
+        <section>
+            <h2>Calcula el área y perímetro de un circulo
+    
+            </h2>
+            <form action="">
+                <label for="InputCirculo">
+                    Radio del circulo
+                </label>
+    
+                <input type="number" name="" id="InputCirculo">
+                <button type="button" onclick="calcularPerimetroCirculo()">    
+                    Calcular perimetro
+                </button>
+                <button type="button" onclick="calcularAreaCirculo()">
+                    Calcular el área
+    
+                </button>
+    
+            </form>
+    
+        </section>
+    </div>
+
+
+    <script src="./2figuras.js">
+        
+
+
+    </script>
+</body>
+</html>
